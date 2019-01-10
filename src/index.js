@@ -32,12 +32,14 @@ class NLXConnector extends BaseConnector {
   /**
    * Claim does a call to the requested NLX backend and saves the result to be retrieved by get
    *
-   * @param ssid {string} Unused for this connector
-   * @param data {object} Encoded request data.path should contain the endpoint, data.params an object with queryParameters
+   * @param {string} ssid - Unused for this connector
+   * @param {object} data - Specifies the request to be made to NLX
+   * @param {string} data.path - Path to be appended to the outway endpoint. This should be of the form /<organisation>/<service>/<endpoint
+   * @param {object} data.params - Query parameters to be added to the request
    * @returns {Promise<string>} Identifier to retrieve the result
    */
   async claim (ssid, data) {
-    let response = await axios.get(this.outwayEndpoint + data.path, { params: data.params })
+    let response = await axios.get(this.outwayEndpoint + data.path, { 'params': data.params })
 
     let index = crypto.enc.Base64.stringify(crypto.lib.WordArray.random(64))
 
