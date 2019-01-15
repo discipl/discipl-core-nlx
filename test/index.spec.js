@@ -12,7 +12,6 @@ describe('disciple-nlx-connector', () => {
     expect(nlxConnector.getName()).to.equal('nlx')
   })
 
-
   it('should make the correct call', async () => {
     let nlxConnector = new NLXConnector()
     nlxConnector.configure('http://localhost:1337')
