@@ -10,6 +10,7 @@ script:
   - npm run lint
   - npm test
   - npm run system-test
+  - sleep 10
 after_success:
   - npm run coverage
   - 'if [ ! -z "$SONAR_TOKEN" ]; then sonar-scanner; fi'

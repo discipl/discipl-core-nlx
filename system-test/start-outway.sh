@@ -10,3 +10,5 @@ docker run --detach \
   --env DISABLE_LOGDB=1 \
   --publish 4080:80 \
   nlxio/outway:v0.0.20
+
+docker logs my-nlx-outway --follow
