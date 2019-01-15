@@ -6,12 +6,10 @@ addons:
     organization: "discipl" # the key of the org you chose at step #3
 before_script:
   - if [ ! -z "$NLX_KEY" ]; then echo "$NLX_KEY" > ./system-test/certs/org.key; fi
-  - cat ./system-test/certs/org.key
 script:
   - npm run lint
   - npm test
   - npm run system-test
-  - sleep 10
 after_success:
   - npm run coverage
   - 'if [ ! -z "$SONAR_TOKEN" ]; then sonar-scanner; fi'
