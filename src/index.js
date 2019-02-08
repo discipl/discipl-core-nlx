@@ -1,6 +1,6 @@
 import crypto from 'crypto-js'
 import axios from 'axios'
-import { BaseConnector } from 'discipl-core-baseconnector'
+import { BaseConnector } from '@discipl/core-baseconnector'
 
 class NLXConnector extends BaseConnector {
   constructor () {
@@ -52,7 +52,7 @@ class NLXConnector extends BaseConnector {
     return this.cache[reference]
   }
 
-  async subscribe (ssid) {
+  async observe (ssid) {
     throw new TypeError('Subscribe is not implemented')
   }
 }
