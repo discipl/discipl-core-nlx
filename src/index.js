@@ -17,16 +17,16 @@ class NLXConnector extends BaseConnector {
     this.outwayEndpoint = outwayEndpoint
   }
 
-  async getSsidOfClaim (reference) {
-    throw new TypeError('getSsidOfClaim is not implemented')
+  async getDidOfClaim (reference) {
+    throw new TypeError('getDidOfClaim is not implemented')
   }
 
   async getLatestClaim (ssid) {
     throw new TypeError('getLatestClaim is not implemented')
   }
 
-  async newSsid () {
-    throw new TypeError('newSsid is not implemented')
+  async newIdentity () {
+    throw new TypeError('newIdentity is not implemented')
   }
 
   /**
